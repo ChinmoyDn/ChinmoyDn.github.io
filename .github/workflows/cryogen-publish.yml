@@ -31,4 +31,4 @@ jobs:
           commit-message: ${{ github.event.head_commit.message }}
           branch: gh-pages                                      # branch to deploy to
           single-commit: yes                                    # no commit history
-          folder: public/blog                                   # directory to deploy from
+          folder: public                                   # directory to deploy from
