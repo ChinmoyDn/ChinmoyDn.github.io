@@ -9,8 +9,9 @@
     {% endblock %}
     <link rel="canonical" href="{{site-url}}{{uri}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
-          type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
@@ -48,7 +49,7 @@
 </nav>
 
 
-<div class="container">
+<div class="container main-container">
 
 
     <div class="row">
@@ -61,7 +62,7 @@
 
         <div class="col-md-3">
             <div id="sidebar">
-                <h3>Links</h3>
+                <h4>Links</h4>
                 <ul id="links">
                     <li><a href="http://cryogenweb.org/docs/home.html">Cryogen Docs</a></li>
                     <li><a href="https://carmen.la/blog/archives/">Carmen's Blog</a></li>
@@ -71,7 +72,7 @@
                 </ul>
                 {% if latest-posts|not-empty %}
                 <div id="recent">
-                    <h3>Recent Posts</h3>
+                    <h4>Recent Posts</h4>
                     <ul>
                         {% for post in latest-posts %}
                         <li><a href="{{post.uri}}">{{post.title}}</a></li>
@@ -81,7 +82,7 @@
                 {% endif %}
                 {% if tags|not-empty %}
                 <div id="tags">
-                    <h3>Tags</h3>
+                    <h4>Tags</h4>
                     <ul>
                         {% for tag in tags %}
                         <li><a href="{{tag.uri}}">{{tag.name}}</a></li>
@@ -92,8 +93,7 @@
             </div>
         </div>
     </div>
-    <footer>Copyright &copy; {{today|date:yyyy}} {{author}}
-        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+    <footer>Copyright &copy; {{today|date:yyyy}} {{author}} </footer>
 </div>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
