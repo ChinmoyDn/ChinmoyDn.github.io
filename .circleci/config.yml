@@ -1,9 +1,43 @@
-deployment:
-  production:
-    branch: main
-    commands:
-      - ./deploy.sh
+version: 2
 
-test:
-  override:
-    - lein run
+jobs:
+  deploy:
+    docker: 
+      - image: circleci/clojure:lein-2.9.0
+    steps:
+      - checkout
+      - restore_cache: 
+          keys: 
+            - site-{{ checksum "project.clj"}}
+      - run: 
+          name: clone GH pages repo
+          command: git clone https://${GH_TOKEN}@github.com/ChinmoyDn/ChinmoyDn.github.io.git
+      - run:
+          name: build site
+          command: |
+            lein run
+            rm public/feed.xml
+            rm public/archives.html
+            cp -r public/* ChinmoyDn.github.io/
+      - save_cache: 
+          paths: 
+            - ~/.m2
+          key: site-{{ checksum "project.clj"}}
+      - run:
+          name: push to GH pages
+          command: |
+            cd cryogen-project.github.io
+            git config user.email "chinmoy.debnath11@gmail.com"
+            git config user.name "Chinmoy Debnath"
+            git add --all
+            git commit -a -m "Circle #$CIRCLE_BUILD_NUM"
+            git push --force origin master
+      - store_artifacts:
+          path: public 
+          destination: site-content
+
+workflows:
+  version: 2
+  deploy_site:
+    jobs:
+      - deploy
