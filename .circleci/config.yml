@@ -1,0 +1,9 @@
+deployment:
+  production:
+    branch: main
+    commands:
+      - ./deploy.sh
+
+test:
+  override:
+    - lein run
