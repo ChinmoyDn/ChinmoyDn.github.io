@@ -17,7 +17,6 @@ jobs:
           command: |
             lein run
             rm public/feed.xml
-            rm public/archives.html
             cp -r public/* ChinmoyDn.github.io/
       - save_cache: 
           paths: 
