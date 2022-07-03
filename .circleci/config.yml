@@ -30,7 +30,7 @@ jobs:
             git config user.name "Chinmoy Debnath"
             git add --all
             git commit -a -m "Circle #$CIRCLE_BUILD_NUM"
-            git push --force origin master
+            git push --force origin gh-pages
       - store_artifacts:
           path: public 
           destination: site-content
