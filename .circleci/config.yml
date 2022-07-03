@@ -25,7 +25,7 @@ jobs:
       - run:
           name: push to GH pages
           command: |
-            cd cryogen-project.github.io
+            cd ChinmoyDn.github.io
             git config user.email "chinmoy.debnath11@gmail.com"
             git config user.name "Chinmoy Debnath"
             git add --all
