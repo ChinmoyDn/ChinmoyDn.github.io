@@ -24,6 +24,10 @@ pre code {
   white-space: normal;
   overflow-x: auto; 
 }
+
+pre code.hljs{
+  background-color: #4a4a4a; 
+}
 /* end of pre tag styles */
 
 
@@ -76,6 +80,7 @@ footer{
 .layout-row{
   display: grid;
   grid-auto-flow: row;
+  gap: 2rem;
 }
 @media all and (min-width: 576px) {
   .layout-row{
