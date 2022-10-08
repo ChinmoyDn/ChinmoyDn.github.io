@@ -1,0 +1,86 @@
+html {
+  font-size: 12px;
+}
+body {
+  font-family: 'Maitree', serif;
+  max-width: 46em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+/* pre tag styles */
+pre {
+  background-color: inherit;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+pre code {
+  display: block;
+  padding: 0.5em;
+  overflow-wrap: normal;
+  white-space: normal;
+  overflow-x: auto; 
+}
+/* end of pre tag styles */
+
+
+/* navbar styles */
+.navbar{
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.navbar > .title {
+  font-family: 'Ubuntu', sans-serif;
+  margin-right: 2.5rem;
+  font-size: 2rem;
+}
+
+.navbar > .title:hover {
+  border-bottom: 0;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-bottom: 0;
+}
+.navbar ul li {
+  list-style: none;
+  margin-bottom: 0;
+}
+/* end of navbar styles */
+
+
+/* footer styles */
+footer{
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+/* end of footer styles */
+
+
+/* preview styles */
+.preview-link{
+  font-size: 1.5rem;
+}
+/* end of preview styles */
+
+
+/* layout styles */
+.layout-row{
+  display: grid;
+  grid-auto-flow: row;
+}
+@media all and (min-width: 576px) {
+  .layout-row{
+    grid-auto-flow: column;
+    grid-template-columns: 9fr 3fr;
+  }
+}
+/* end of layout styles */
