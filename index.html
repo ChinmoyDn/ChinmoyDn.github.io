@@ -11,51 +11,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Maitree:wght@300;400;700&family=Sorts+Mill+Goudy:ital@0;1&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura-dark.css" media="screen and (prefers-color-scheme: dark)" />
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/a11y-dark.min.css" integrity="sha512-Vj6gPCk8EZlqnoveEyuGyYaWZ1+jyjMPg8g4shwyyNlRQl6d3L9At02ZHQr5K6s5duZl/+YKMnM3/8pDhoUphg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="/css/screen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
 
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Chinmoy Debnath</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li  class="active" ><a href="/">Home</a></li>
-                <li
-                ><a href="/archives/">Archives</a></li>
-                
-                <li
-                >
-                <a href="/pages/about/">About</a>
-                </li>
-                
-                <li><a href="/feed.xml">RSS</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div><!--/.container-fluid -->
-</nav>
+  <nav class="navbar">
+    <a class="title" href="/">Chinmoy Debnath</a>
+      <ul>
+        <li ><a href="/">Home</a></li>
+        <li
+          ><a href="/archives/">Archives</a></li>
+        
+        <li
+          >
+          <a href="/pages/about/">About</a>
+        </li>
+        
+        <li><a href="/feed.xml">RSS</a></li>
+      </ul>
+  </nav>
 
 
-<div class="container main-container">
-
-
-    <div class="row">
-        <div class="col-lg-9">
-            <div id="content">
-                
+  <div class="main-container">
+    <div class="layout-row">
+      <div class="col-lg-9">
+        <div id="content">
+          
 <div id="post">
     
     <div class="post-header">
@@ -66,7 +52,7 @@
         </div>
     </div>
     <h3 id="test-page">Test page</h3><p>Testing github actions</p>
-    <a href="/posts/03-07-2022-docs/">Continue reading &#8594;</a>
+    <a class="preview-link" href="/posts/03-07-2022-docs/">Continue reading &#8594;</a>
     <hr>
     
     <div class="post-header">
@@ -77,7 +63,7 @@
         </div>
     </div>
     <p>Coming soon</p>
-    <a href="/posts/05-09-2021-docs/">Continue reading &#8594;</a>
+    <a class="preview-link" href="/posts/05-09-2021-docs/">Continue reading &#8594;</a>
     <hr>
     
 
@@ -87,48 +73,44 @@
     </div>
 </div>
 
-            </div>
         </div>
+      </div>
 
-        <div class="col-md-3">
-            <div id="sidebar">
-                <h4>Links</h4>
-                <ul id="links">
-                    <li><a href="http://cryogenweb.org/docs/home.html">Cryogen Docs</a></li>
-                    <li><a href="https://carmen.la/blog/archives/">Carmen's Blog</a></li>
-                    
-                    <li><a href="/pages/another-page/">Another Page</a></li>
-                    
-                </ul>
-                
-                <div id="recent">
-                    <h4>Recent Posts</h4>
-                    <ul>
-                        
-                        <li><a href="/posts/03-07-2022-docs/">A new Test Page</a></li>
-                        
-                        <li><a href="/posts/05-09-2021-docs/">Test Page</a></li>
-                        
-                    </ul>
-                </div>
-                
-                
-                <div id="tags">
-                    <h4>Tags</h4>
-                    <ul>
-                        
-                        <li><a href="/tags-output/test/">test</a></li>
-                        
-                    </ul>
-                </div>
-                
-            </div>
+      <div class="col-md-3">
+        <div id="sidebar">
+          <h4>Links</h4>
+          <ul id="links">
+            
+            <li><a href="/pages/another-page/">Another Page</a></li>
+            
+          </ul>
+          
+          <div id="recent">
+            <h4>Recent Posts</h4>
+            <ul>
+              
+              <li><a href="/posts/03-07-2022-docs/">A new Test Page</a></li>
+              
+              <li><a href="/posts/05-09-2021-docs/">Test Page</a></li>
+              
+            </ul>
+          </div>
+          
+          
+          <div id="tags">
+            <h4>Tags</h4>
+            <ul>
+              
+              <li><a href="/tags-output/test/">test</a></li>
+              
+            </ul>
+          </div>
+          
         </div>
+      </div>
     </div>
     <footer>Copyright &copy; 2022 Chinmoy Debnath </footer>
-</div>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </div>
 <script src="/js/highlight.pack.js" type="application/javascript"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
