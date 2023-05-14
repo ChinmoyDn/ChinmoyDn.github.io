@@ -13,3 +13,7 @@ pom.xml.asc
 /themes/lotus/css/blog.css
 /themes/lotus/css/blog.css.map
 .cpcache/
+
+.lsp/
+.clj-kondo/
+**/.DS_Store
